@@ -5,22 +5,18 @@ import allureReporter from "@wdio/allure-reporter";
 describe("Login", () => {
   before(async () => {
     //Do this once, primarily for initialization
-    console.log("Run BEFORE");
   });
 
   beforeEach(async () => {
     //Do this for every test run
-    console.log("Run BEFORE EACH TEST");
   });
 
   after(async () => {
     //Used for test clean up: logging out, clean data, etc
-    console.log("Run AFTER");
   });
 
   afterEach(async () => {
     //Usually for logging
-    console.log("Run AFTER EACH TEST");
   });
 
   it("should bring you to home page after a successful login", async () => {
@@ -61,10 +57,6 @@ describe("Login", () => {
 
   it("Test to demonstrate failed test with screenshot", async () => {
     allureReporter.addFeature("Screenshot Test on Fail");
-
-    var myStr = 9;
-    myStr = "Hello World";
-    console.log(myStr);
 
     await browser.url("https://app.datafox.com/search/lists/mine");
     await LoginPage.DatafoxNavigationComp.companiesTab.click();

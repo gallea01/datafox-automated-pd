@@ -68,7 +68,7 @@ describe("Login", () => {
 
     await browser.url("https://app.datafox.com/search/lists/mine");
     await LoginPage.DatafoxNavigationComp.companiesTab.click();
-    await expect(browser).toHaveTitle("Oracle DataFox - Get Started");
+    await expect(browser).not.toHaveTitle("Oracle DataFox - Get Started");
   });
 
   xit("Sample faker", async () => {
